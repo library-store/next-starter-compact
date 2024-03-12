@@ -10,7 +10,7 @@ export default withNextIntlConfig({
   poweredByHeader: false,
   reactStrictMode: true,
   experimental: {
-    serverComponentsExternalPackages: ['pino'],
+    
   },
   webpack: (config) => {
     config.externals.push({

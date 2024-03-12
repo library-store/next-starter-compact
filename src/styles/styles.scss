@@ -1,0 +1,43 @@
+// Variables (adjust as needed)
+$nav-bg: #333;
+$nav-link-color: #fff;
+
+// Navigation
+.navbar {
+  background-color: $nav-bg;
+  color: $nav-link-color;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 1rem;
+  color: $nav-link-color;
+  text-decoration: none;
+}
+
+// Hamburger button
+.hamburger {
+  /* Style your hamburger here */
+}
+
+// Responsive (adjust breakpoints)
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide on smaller screens */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger button */
+  }
+}
