@@ -17,30 +17,63 @@ export default {
     },
     extend: {
       colors: {
-        gray: {
-          100: '#f7fafc',
-          200: '#edf2f7',
-          300: '#e2e8f0',
-          400: '#cbd5e0',
-          500: '#a0aec0',
-          600: '#718096',
-          700: '#4a5568',
-          800: '#2d3748',
-          900: '#1a202c',
+        primary: {
+          DEFAULT: '#4361ee',
+          light: '#eaf1ff',
+          'dark-light': 'rgba(67,97,238,.15)',
+        },
+        secondary: {
+          DEFAULT: '#805dca',
+          light: '#ebe4f7',
+          'dark-light': 'rgb(128 93 202 / 15%)',
+        },
+        success: {
+          DEFAULT: '#00ab55',
+          light: '#ddf5f0',
+          'dark-light': 'rgba(0,171,85,.15)',
+        },
+        danger: {
+          DEFAULT: '#e7515a',
+          light: '#fff5f5',
+          'dark-light': 'rgba(231,81,90,.15)',
+        },
+        warning: {
+          DEFAULT: '#e2a03f',
+          light: '#fff9ed',
+          'dark-light': 'rgba(226,160,63,.15)',
+        },
+        info: {
+          DEFAULT: '#2196f3',
+          light: '#e7f7ff',
+          'dark-light': 'rgba(33,150,243,.15)',
+        },
+        dark: {
+          DEFAULT: '#3b3f5c',
+          light: '#eaeaec',
+          'dark-light': 'rgba(59,63,92,.15)',
+        },
+        black: {
+          DEFAULT: '#3c3c3c',
+          light: '#3c3c3c',
+          'dark-light': 'rgba(14,23,38,.15)',
+        },
+        white: {
+          DEFAULT: '#ffffff',
+          light: '#e0e6ed',
+          dark: '#888ea8',
         },
         blue: {
-          100: '#ebf8ff',
-          200: '#bee3f8',
-          300: '#90cdf4',
-          400: '#63b3ed',
-          500: '#4299e1',
-          600: '#3182ce',
-          700: '#2b6cb0',
-          800: '#2c5282',
-          900: '#2a4365',
+          DEFAULT: '#004BEF',
+          light: '#48acff',
+          dark: '#0e245d',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line global-require
+    require('@tailwindcss/forms')({
+      strategy: 'class',
+    }),
+  ],
 } satisfies Config;

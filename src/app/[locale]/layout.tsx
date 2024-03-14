@@ -3,7 +3,6 @@ import '@/styles/styles.scss';
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -38,17 +37,18 @@ export default function RootLayout(props: {
 }) {
   if (!AppConfig.locales.includes(props.params.locale)) notFound();
 
-  const messages = useMessages();
+  // const messages = useMessages();
 
   return (
     <html lang={props.params.locale}>
       <body>
-        <NextIntlClientProvider
+        {/* <NextIntlClientProvider
           locale={props.params.locale}
           messages={messages}
         >
           {props.children}
-        </NextIntlClientProvider>
+        </NextIntlClientProvider> */}
+        {props.children}
       </body>
     </html>
   );

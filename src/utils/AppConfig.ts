@@ -3,7 +3,7 @@ import type { LocalePrefix } from 'node_modules/next-intl/dist/types/src/shared/
 const localePrefix: LocalePrefix = 'as-needed';
 
 export const AppConfig = {
-  name: 'Iflux',
+  name: 'iFLUX Company',
   locales: ['en', 'vi'],
   defaultLocale: 'en',
   localePrefix,

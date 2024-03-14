@@ -9,9 +9,6 @@ export default withNextIntlConfig({
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  experimental: {
-    
-  },
   webpack: (config) => {
     config.externals.push({
       bufferutil: 'bufferutil',

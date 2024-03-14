@@ -1,24 +1,37 @@
 'use client';
 
-import { useState } from "react";
+import { Button } from '../Elements/button';
 
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
   return (
-    <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <div className="logo font-bold">Your Brand</div>
-      <button 
-        className="md:hidden block" // Show hamburger only on smaller screens
-        onClick={() => setIsNavOpen(!isNavOpen)}
-      >
-        MENU
-      </button>
-      <ul className={`md:flex items-center space-x-4 absolute md:static bg-gray-800 w-full left-0 p-4 md:p-0 top-12 md:top-0 transition-all ${isNavOpen ? 'opacity-100' : 'opacity-0 -top-96'}`}>
-        <li><a href="#" className="hover:text-blue-500">Home</a></li>
-        <li><a href="#" className="hover:text-blue-500">About</a></li>
-        <li><a href="#" className="hover:text-blue-500">Services</a></li>
-        <li><a href="#" className="hover:text-blue-500">Contact</a></li>
+    <nav className="flex flex-1 items-center justify-between">
+      <ul className="flex flex-1 items-center justify-center gap-[85px] font-medium  transition-all">
+        <li>
+          <a href="#" className="hover:font-bold">
+            About us
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:font-bold">
+            Loan
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:font-bold">
+            Saving
+          </a>
+        </li>
+      </ul>
+
+      <ul className="flex items-center gap-[7px] font-medium">
+        <li>
+          <Button className="rounded-full bg-black text-white">Log in</Button>
+        </li>
+        <li>
+          <Button className="rounded-full border border-black bg-white text-black">
+            Sign up
+          </Button>
+        </li>
       </ul>
     </nav>
   );

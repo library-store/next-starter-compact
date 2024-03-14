@@ -1,37 +1,43 @@
-// Variables (adjust as needed)
-$nav-bg: #333;
-$nav-link-color: #fff;
+.slick-slider {
+  .slick-arrow {
+    display: none !important;
+  }
+  .slick-dots {
+    bottom: 30px !important;
 
-// Navigation
-.navbar {
-  background-color: $nav-bg;
-  color: $nav-link-color;
-  padding: 1rem;
+    li {
+      width: 40px !important;
+      height: 11px !important;
+      color: transparent;
+      background: rgb(255, 255, 255, 0.4);
+      border-radius: 37px;
+
+      &.slick-active {
+        background: rgb(255, 255, 255, 1);
+      }
+    }
+  }
+}
+
+.home-buttons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 5px;
+  margin-bottom: 100px;
+
+  button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17.3px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 19px 19px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px 0px;
+  }
 }
 
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav-links li a {
-  display: block;
-  padding: 1rem;
-  color: $nav-link-color;
-  text-decoration: none;
-}
-
-// Hamburger button
-.hamburger {
-  /* Style your hamburger here */
-}
-
-// Responsive (adjust breakpoints)
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* Hide on smaller screens */

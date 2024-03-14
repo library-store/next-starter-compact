@@ -6,6 +6,7 @@
     "sign_up_link": "Sign up"
   },
   "BaseTemplate": {
+    "meta_description": "meta description",
     "description": "",
     "made_with": ""
   },
