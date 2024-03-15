@@ -13,12 +13,7 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 }
 
 const SignUpPage = () => {
-
-  return (
-    <div>
-      Sign Up
-    </div>
-  )
+  return <div>Sign Up</div>;
 };
 
 export default SignUpPage;

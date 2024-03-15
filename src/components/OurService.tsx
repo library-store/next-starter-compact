@@ -5,7 +5,7 @@ import Card from './Elements/Card';
 export default function OurService() {
   return (
     <div>
-      <Card />
+      <Card>Nội dung demo</Card>
     </div>
   );
 }

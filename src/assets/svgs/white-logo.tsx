@@ -7,7 +7,7 @@ const WhiteLogo = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1_375)">
+      <g clipPath="url(#clip0_1_375)">
         <path d="M53.8391 0H45.2198V43.5595H53.8391V0Z" fill="white" />
         <path
           d="M83.1854 28.5831C83.1854 30.3505 82.8808 31.8269 82.2745 33.0043C81.6655 34.1843 80.847 35.068 79.8138 35.6554C78.7833 36.2454 77.6033 36.5391 76.2764 36.5391C74.3595 36.5391 72.8776 35.9599 71.8281 34.7989C70.7785 33.6378 70.2538 31.8052 70.2538 29.3009V13.8267H61.6345V30.6278C61.6345 33.6487 62.1675 36.1529 63.236 38.1433C64.3046 40.1337 65.7973 41.6074 67.7115 42.5645C69.6284 43.5243 71.8362 44.0002 74.3432 44.0002C76.6271 44.0002 78.7262 43.4754 80.6431 42.4258C81.7824 41.8005 82.7449 40.9766 83.5715 39.9923V43.557H91.7503V13.8267H83.1854V28.5831Z"
@@ -51,8 +51,8 @@ const WhiteLogo = () => {
           y2="28.6945"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#01EAAB" />
-          <stop offset="1" stop-color="#0090F1" />
+          <stop stopColor="#01EAAB" />
+          <stop offset="1" stopColor="#0090F1" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1_375"
@@ -62,8 +62,8 @@ const WhiteLogo = () => {
           y2="8.68178"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#01EAAB" />
-          <stop offset="1" stop-color="#0090F1" />
+          <stop stopColor="#01EAAB" />
+          <stop offset="1" stopColor="#0090F1" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_1_375"
@@ -73,8 +73,8 @@ const WhiteLogo = () => {
           y2="21.8664"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#01EAAB" />
-          <stop offset="1" stop-color="#0090F1" />
+          <stop stopColor="#01EAAB" />
+          <stop offset="1" stopColor="#0090F1" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1_375"
@@ -84,8 +84,8 @@ const WhiteLogo = () => {
           y2="38.3303"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#01EAAB" />
-          <stop offset="1" stop-color="#0090F1" />
+          <stop stopColor="#01EAAB" />
+          <stop offset="1" stopColor="#0090F1" />
         </linearGradient>
         <clipPath id="clip0_1_375">
           <rect width="128" height="44" fill="white" />

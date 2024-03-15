@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import * as React from 'react';
 
 import image1 from '@/assets/images/carousel/saving-2.png';
 
 import Carousel from './Carousel';
 
-export function MainCarouselItem1() {
+function MainCarouselItem1() {
   return (
     <div className="content-container mx-auto flex h-[589px] items-center justify-between">
       <div className="text-[35px] font-bold text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
@@ -16,7 +16,7 @@ export function MainCarouselItem1() {
         </div>
       </div>
       <div className="mr-[-86px]">
-        <img src={image1.src} alt="" />
+        <Image src={image1.src} alt="" />
       </div>
     </div>
   );

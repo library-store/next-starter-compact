@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
@@ -15,11 +14,7 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 }
 
 export default function About() {
-  const t = useTranslations('About');
+  // const t = useTranslations('About');
 
-  return (
-    <>
-      <p>{t('about_paragraph')}</p>
-    </>
-  );
+  return <>About</>;
 }

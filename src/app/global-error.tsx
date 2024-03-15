@@ -6,6 +6,7 @@ export default function GlobalError(props: {
   error: Error & { digest?: string };
   params: { locale: string };
 }) {
+  console.log(props.error);
   return (
     <html lang={props.params.locale}>
       <body>

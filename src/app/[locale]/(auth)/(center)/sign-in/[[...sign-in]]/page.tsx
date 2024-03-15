@@ -13,11 +13,7 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 }
 
 const SignInPage = () => {
-  return (
-    <div>
-      Login SignInPage
-    </div>
-  )
+  return <div>Login SignInPage</div>;
 };
 
 export default SignInPage;

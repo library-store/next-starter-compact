@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/no-unstable-nested-components */
 
 'use client';
 
@@ -9,12 +10,12 @@ import * as React from 'react';
 import Slider from 'react-slick';
 
 export interface IAppProps {
-  items: [any];
+  items?: React.ReactNode[];
 }
 
 export default function Carousel({ items = [] }: IAppProps) {
   const settings = {
-    customPaging(i) {
+    customPaging(i: number) {
       return <div>{i}</div>;
     },
     dots: true,

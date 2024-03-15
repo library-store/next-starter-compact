@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { AppConfig } from '@/utils/AppConfig';
+import type React from 'react';
 
 export const metadata: Metadata = {
   icons: [

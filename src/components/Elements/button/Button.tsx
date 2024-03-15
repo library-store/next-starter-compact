@@ -12,9 +12,11 @@ const Button: React.FC<ButtonProps> = ({
   children,
   className,
   onClick,
-  variant = '',
+  variant = 'primary',
   type = 'button',
 }) => {
+  console.log(variant);
+
   return (
     <button
       type={type}

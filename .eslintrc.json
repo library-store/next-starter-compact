@@ -1,9 +1,15 @@
 {
   // Configuration for JavaScript files
   "extends": [
-    "airbnb-base",
+    // "airbnb-base",
     "next/core-web-vitals", // Needed to avoid warning in next.js build: 'The Next.js plugin was not detected in your ESLint configuration'
     "plugin:prettier/recommended"
+  ],
+  "tailwindcss/no-custom-classname": [
+    "warn",
+    {
+      "cssFiles": ["styles/styles.scss"]
+    }
   ],
   "rules": {
     "prettier/prettier": [
@@ -12,7 +18,8 @@
         "singleQuote": true,
         "endOfLine": "auto"
       }
-    ] // Avoid conflict rule between Prettier and Airbnb Eslint
+    ], // Avoid conflict rule between Prettier and Airbnb Eslint
+    "tailwindcss/classnames-order": "off"
   },
   "overrides": [
     // Configuration for TypeScript files
@@ -26,9 +33,9 @@
       ],
       "extends": [
         "plugin:tailwindcss/recommended",
-        "airbnb",
-        "airbnb-typescript",
-        "next/core-web-vitals",
+        // "airbnb",
+        // "airbnb-typescript",
+        // "next/core-web-vitals",
         "plugin:prettier/recommended"
       ],
       "parserOptions": {
@@ -67,5 +74,10 @@
         ]
       }
     }
-  ]
+  ],
+  "settings": {
+    "tailwindcss": {
+      "config": "./tailwind.config.ts"
+    }
+  }
 }

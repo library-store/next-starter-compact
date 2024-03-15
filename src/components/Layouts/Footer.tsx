@@ -5,9 +5,7 @@ import { AppConfig } from '@/utils/AppConfig';
 
 import Divider from '../Elements/Divider';
 
-export interface IAppProps {}
-
-export default function Footer(props: IAppProps) {
+export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-[#004BEF] to-[#16ABFF] text-white">
       <div className="content-container mx-auto">

@@ -1,11 +1,12 @@
 {
   "RootLayout": {
-    "home_link": "Home",
+    "home_link": "Trang chủ",
     "about_link": "About",
-    "sign_in_link": "Sign in",
-    "sign_up_link": "Sign up"
+    "sign_in_link": "Đăng nhập",
+    "sign_up_link": "Đăng ký"
   },
   "BaseTemplate": {
+    "meta_title": "meta title",
     "meta_description": "meta description",
     "description": "",
     "made_with": ""
@@ -15,7 +16,11 @@
     "meta_description": "About page description"
   },
   "SignUp": {
-    "meta_title": "Sign up",
+    "meta_title": "Đăng ký",
+    "meta_description": "."
+  },
+  "SignIn": {
+    "meta_title": "Đăng nhập",
     "meta_description": "."
   }
 }
