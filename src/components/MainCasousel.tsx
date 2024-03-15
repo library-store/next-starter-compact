@@ -16,7 +16,7 @@ function MainCarouselItem1() {
         </div>
       </div>
       <div className="mr-[-86px]">
-        <Image src={image1.src} alt="" />
+        <Image src={image1} alt="" width={617} height={615} />
       </div>
     </div>
   );

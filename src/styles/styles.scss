@@ -3,11 +3,11 @@
     display: none !important;
   }
   .slick-dots {
-    bottom: 30px !important;
+    bottom: 30px;
 
     li {
-      width: 40px !important;
-      height: 11px !important;
+      width: 40px;
+      height: 11px;
       color: transparent;
       background: rgb(255, 255, 255, 0.4);
       border-radius: 37px;
@@ -30,11 +30,63 @@
     align-items: center;
     justify-content: center;
     gap: 17.3px;
-    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: -5px 2px 15px rgba(0, 0, 0, 0.15);
     border-radius: 0px 0px 19px 19px;
     font-size: 30px;
     font-weight: bold;
     padding: 40px 0px;
+  }
+}
+
+.section-our-service {
+  .content {
+    background: url("../assets/svgs/bgwave.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    min-height: 500px;
+  }
+}
+
+.section-industry-news {
+    background: url("../assets/svgs/bgwave2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.coin-rating-slider{
+  .slick-slide{
+    padding: 1px 2px;
+
+    .coin-item{
+      border: 1.5px solid rgb(255, 255, 255, 0.4) !important;
+      outline: 0.5px solid rgb(255, 255, 255, 0.4);
+      border-radius: 19px;
+
+      margin-bottom: 36px;
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .slick-dots{
+    bottom: -50px !important;
+
+    li {
+      width: 24.86px !important;
+      height: 6.84px !important;
+      color: transparent;
+      background: rgb(255, 255, 255, 0.4);
+      border-radius: 37px;
+
+      &.slick-active {
+        background: rgb(255, 255, 255, 1);
+      }
+    }
   }
 }
 

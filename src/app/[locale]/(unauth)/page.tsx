@@ -2,6 +2,9 @@ import { getTranslations } from 'next-intl/server';
 
 import MainCasousel from '@/components/MainCasousel';
 import OurService from '@/components/OurService';
+import IfluxDifference from '@/components/IfluxDifference';
+import IndustryNews from '@/components/IndustryNews';
+import Questions from '@/components/Questions';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -98,6 +101,9 @@ export default function Index() {
         </button>
       </div>
       <OurService />
+      <IfluxDifference />
+      <IndustryNews />
+      <Questions />
     </>
   );
 }

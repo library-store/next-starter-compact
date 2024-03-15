@@ -11,9 +11,10 @@ import Slider from 'react-slick';
 
 export interface IAppProps {
   items?: React.ReactNode[];
+  className?: string;
 }
 
-export default function Carousel({ items = [] }: IAppProps) {
+export default function Carousel({ className, items = [], ...rest }: IAppProps) {
   const settings = {
     customPaging(i: number) {
       return <div>{i}</div>;
@@ -26,7 +27,7 @@ export default function Carousel({ items = [] }: IAppProps) {
     slidesToScroll: 1,
   };
   return (
-    <div className="">
+    <div className={`${className}`} {...rest}>
       <Slider {...settings}>
         {items.map((item, idx) => (
           <div key={`${idx.toString()}`}>{item}</div>
