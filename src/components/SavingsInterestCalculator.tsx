@@ -11,6 +11,8 @@ export default function SavingsInterestCalculator ({}: ISavingsInterestCalculato
   return (
     <div>
       <div className='mx-auto content-container'>
+        <div className='poppins-bold text-[35px] mb-[59px]'>Savings Interest Calculation</div>
+
         <SavingTabs />
       </div>
     </div>

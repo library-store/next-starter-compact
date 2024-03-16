@@ -12,12 +12,12 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" className="hover:font-bold">
+          <a href="/loan" className="hover:font-bold">
             Loan
           </a>
         </li>
         <li>
-          <a href="#" className="hover:font-bold">
+          <a href="/saving" className="hover:font-bold">
             Saving
           </a>
         </li>

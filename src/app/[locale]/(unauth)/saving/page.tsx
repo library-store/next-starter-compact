@@ -1,11 +1,11 @@
 // import { useTranslations } from 'next-intl';
 import MainBanner from '@/components/MainBanner';
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
 
 import imgSaving1 from '@/assets/images/banner-saving1.png';
 import { Button } from '@/components/Elements/button';
 import SavingsInterestCalculator from '@/components/SavingsInterestCalculator';
+import ServiceInfomation from '@/components/ServiceInfomation';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -204,8 +204,12 @@ export default function Saving() {
       </div>
     </div>
 
-    <div>
+    <div className='mt-[85px]'>
       <SavingsInterestCalculator />
+    </div>
+    
+    <div className='mt-[85px] mb-[200px]'>
+      <ServiceInfomation />
     </div>
   </div>;
 }

@@ -36,7 +36,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#">Job Opportunities</a>
+                  <a href="/job">Job Opportunities</a>
                 </li>
               </ul>
               <ul>

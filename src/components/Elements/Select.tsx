@@ -3,11 +3,13 @@ import ReactSelect, { type GroupBase, type OptionProps } from 'react-select';
 
 export interface ISelectProps extends React.InputHTMLAttributes<HTMLInputElement>{
   label?: string;
+  height?: number,
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   options: { 
     label: string; 
     value: string | number;
   }[];
+  style: React.CSSProperties
 }
 
 const DropdownIndicator = () => {
@@ -25,13 +27,15 @@ export default function Select(props: Readonly<ISelectProps>) {
     label,
     placeholder = 'Select an option',
     options,
+    height = 48,
     onChange,
+    style = {},
     ...rest
   } = props;
 
   return (
     <div>
-      {label && <label htmlFor="select">{label}</label>}
+      {label && <label className='inline-block mb-3 font-medium text-[18px]' htmlFor="select">{label}</label>}
       
       <ReactSelect 
         className='rounded-[12px] shadow-[inset_3px_3px_4px_rgba(0,0,0,0.08)]'
@@ -40,7 +44,7 @@ export default function Select(props: Readonly<ISelectProps>) {
         options={options} 
         styles={{
           indicatorSeparator: (provided) => ({ ...provided, display: 'none' }),
-          control: (provided) => ({ ...provided, color: '#3C3C3C', boxShadow: 'inset 3px 3px 4px rgba(0, 0, 0, 0.08)' }),
+          control: (provided) => ({ ...provided, ...style }),
         }} 
         components={{ DropdownIndicator  }}
         {...rest}
