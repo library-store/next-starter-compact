@@ -1,10 +1,5 @@
 import * as React from "react";
 
-import Card from "./Elements/Card";
-import CoinRatingCasousel from "./CoinRatingCasousel";
-import { Button } from "./Elements/button";
-import Image from "next/image";
-
 import imgSafety from "@/assets/images/Safety.png"
 import imgPerfomance from "@/assets/images/Perfomance.png"
 import imgTransparency from "@/assets/images/Transparency.png"

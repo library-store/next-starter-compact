@@ -1,8 +1,5 @@
 import * as React from "react";
 
-import imgSafety from "@/assets/images/Safety.png"
-import imgPerfomance from "@/assets/images/Perfomance.png"
-import imgTransparency from "@/assets/images/Transparency.png"
 import Image from "next/image";
 
 import imgNew from "@/assets/images/image-1.png"
@@ -29,7 +26,7 @@ export default function IndustryNews() {
           <div className="content-container mx-auto">
             <div className="flex justify-between gap-[58px]">
               {
-                [1,2,3].map(item => (
+                [1,2,3].map(() => (
                   <div className="grow bg-gray rounded-[35px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[38px]">
                     <div className="font-medium text-[15px] mb-6">
                       26.01.2023

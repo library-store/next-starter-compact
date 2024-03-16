@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import Card from "./Elements/Card";
 import CoinRatingCasousel from "./CoinRatingCasousel";
 import { Button } from "./Elements/button";
 
@@ -16,8 +15,8 @@ const ArrowRight = () => {
       <path
         d="M1 1L9 7.30303L1 14"
         stroke="#959595"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
