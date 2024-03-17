@@ -20,9 +20,9 @@ const SavingTabs = () => (
   <Tabs.Root className="TabsRoot" defaultValue="tab1">
     <Tabs.List className="TabsList" aria-label="Manage your account">
       <Tabs.Trigger className="TabsTrigger" value="tab1">
-        <Button className="bg-gradient-to-b from-[#07EBAC] to-[#0F64EF] rounded-[20px] text-white font-medium text-[20px] w-[330px]">
+        <div className="bg-gradient-to-b from-[#07EBAC] to-[#0F64EF] rounded-[20px] text-white font-medium text-[20px] w-[330px] h-[58px] flex items-center justify-center">
           Single Deposit Savings
-        </Button>
+        </div>
       </Tabs.Trigger>
     </Tabs.List>
     <Tabs.Content className="TabsContent" value="tab1">

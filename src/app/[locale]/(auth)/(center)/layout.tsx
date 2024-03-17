@@ -4,7 +4,7 @@ export default function CenteredLayout(props: { children: React.ReactNode }) {
   // Redirect to the home page if the user is already signed in
 
   return (
-    <div className="flex min-h-screen">
+    <div className="min-h-screen">
       {props.children}
     </div>
   );
