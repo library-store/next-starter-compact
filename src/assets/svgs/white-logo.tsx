@@ -1,6 +1,9 @@
-const WhiteLogo = () => {
+import type { SvgProps } from "./Type";
+
+const WhiteLogo = ({className = ''}: SvgProps) => {
   return (
     <svg
+      className={className}
       width="128"
       height="44"
       viewBox="0 0 128 44"

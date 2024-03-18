@@ -19,6 +19,6 @@ export default function Saving() {
   // const t = useTranslations('About');
 
   return (
-    <PageSaving />
+    <div className="mt-[32px]"><PageSaving /></div>
   )
 }

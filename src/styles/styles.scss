@@ -35,6 +35,43 @@
     font-size: 30px;
     font-weight: bold;
     padding: 40px 0px;
+
+    &>div{
+      width: 84px;
+      height: 88px;
+      position: relative;
+
+      &>svg{
+        position: absolute;
+      }
+
+      
+    }
+
+    span{
+      // transition-duration: 50ms;
+    }
+
+    &:hover{
+      span{
+        background-image: linear-gradient(180deg, #07EBAC, #0251F3);  
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; 
+      }
+    }
+  }
+}
+
+.coin-rating-slider{
+  .coin-item{
+    transition-duration: 150ms;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(201,245,255,0.4);
+      border: none !important;
+    }
   }
 }
 
@@ -97,10 +134,33 @@
 
 @media screen and (max-width: 768px) {
   /* Kiểu CSS cho thiết bị di động */
+  .content-container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .home-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 100px;
+  
+    a {
+      font-size: 20px !important;
+      padding: 10px 0px;
+
+      svg{
+        max-width: 50px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Kiểu CSS cho máy tính bảng */
+  .content-container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media screen and (min-width: 1024px) {

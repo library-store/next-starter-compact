@@ -5,8 +5,8 @@ const tabsData: any = [
   {
     label: "Features",
     content: (
-      <div className="flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
-        <div className="font-semibold text-2xl leading-5"><span>Features</span></div>
+      <div className="md:flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
+        <div className="font-semibold text-2xl leading-5 mb-10 md:mb-0"><span>Features</span></div>
         <div>
           <ul className="list-disc font-medium text-[18px]">
             <li className="mb-12">No minimum/maximum balance required</li>
@@ -22,8 +22,8 @@ const tabsData: any = [
   {
     label: "Conditions",
     content: (
-      <div className="flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
-        <div className="font-semibold text-2xl leading-5"><span>Conditions</span></div>
+      <div className="md:flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
+        <div className="font-semibold text-2xl leading-5 mb-10 md:mb-0"><span>Conditions</span></div>
         <div>
           <ul className="list-disc font-medium text-[18px]">
             <li className="">An account with iFlux is required</li>

@@ -7,12 +7,12 @@ import Carousel from './Carousel';
 
 function MainCarouselItem1() {
   return (
-    <div className="content-container mx-auto flex h-[589px] items-center justify-between">
-      <div className="text-[35px] font-bold text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
-        <div className="text-[65px]">Saving</div>
+    <div className="content-container mx-auto flex md:h-[589px] items-center justify-between">
+      <div className="text-[20px] md:text-[35px] font-bold text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+        <div className="text-[35px] md:text-[65px]">Saving</div>
         <div>Crypto Currencies</div>
         <div>
-          Earn up to <span className="text-[65px]">15%</span> APY
+          Earn up to <span className="text-[35px] md:text-[65px]">15%</span> APY
         </div>
       </div>
       <div className="mr-[-86px]">

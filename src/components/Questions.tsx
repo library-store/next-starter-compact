@@ -9,13 +9,13 @@ export default function Questions() {
     <section className="section-questions mt-[104px]">
       <div className="content-container mx-auto">
         <div className="flex">
-          <div className="w-[50%]">
-            <div className="poppins-bold text-[45px] mb-[41px]">
+          <div className="w-full md:w-[50%]">
+            <div className="poppins-bold text-[1.5rem] mb-[1.5rem] md:text-[45px] md:mb-[41px]">
               <div className="text-blue">Have any questions?</div>
               <div>We've got you covered</div>
             </div>
 
-            <div className="pb-[147px]">
+            <div className="mb-8 md:pb-[147px]">
               <AccordionDemo />
               <div className="mt-[27px]">
                 <Button className="bg-gradient-to-r from-[#0253F1] to-[#14A1FE] text-white text-[22px] rounded-[37px] font-extrabold">
@@ -27,7 +27,7 @@ export default function Questions() {
               </div>
             </div>
           </div>
-          <div className="w-[50%] relative">
+          <div className="hidden md:block md:w-[50%] relative">
             <img src={imgQuestion.src} alt="" className="absolute right-0 pt-[20px]" />
           </div>
         </div>

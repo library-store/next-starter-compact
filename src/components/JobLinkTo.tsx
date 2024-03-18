@@ -19,7 +19,7 @@ export default function JobLinkTo ({}: IJobLinkToProps) {
       e.preventDefault()
       scrollToElement('job-register')
     }}>
-      <Button className="poppins-bold text-[30px] mt-[50px] bg-gradient-to-r from-[#07EBAC] to-[#5DC8FF] rounded-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)]" style={{
+      <Button className="poppins-bold text-[1rem] md:text-[30px] mt-[50px] bg-gradient-to-r from-[#07EBAC] to-[#5DC8FF] rounded-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)]" style={{
         paddingLeft: '28px',
         paddingRight: '28px'
       }}

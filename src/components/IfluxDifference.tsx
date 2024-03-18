@@ -9,7 +9,7 @@ export default function IfluxDifference() {
     <section className="section-iflux-difference mt-[104px]">
       <div className="">
         <div className="title text-center text-[45px] mb-[83px]">
-          <div className="poppins-bold"><span className="text-blue">The IFLUX </span>difference</div>
+          <div className="poppins-bold "><span className="text-blue">The IFLUX </span>difference</div>
 
           <div className="font-medium text-[25px]">
             <div>Loan more cryptos with ease and Loan</div>
@@ -19,8 +19,8 @@ export default function IfluxDifference() {
 
         <div className="content">
           <div className="content-container mx-auto">
-            <div className="flex justify-between gap-[58px]">
-              <div className="grow bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[17px_40px_20px_40px]">
+            <div className="md:flex justify-between gap-[58px]">
+              <div className="grow mb-5 md:mb-0 bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[17px_40px_20px_40px]">
                 <div className="text-center">
                   <img src={imgSafety.src} alt="Safety" className="mx-auto" />
                 </div>
@@ -35,7 +35,7 @@ export default function IfluxDifference() {
                   </div>
                 </div>
               </div>
-              <div className="grow bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[17px_40px_20px_40px]">
+              <div className="grow mb-5 md:mb-0 bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[17px_40px_20px_40px]">
                 <div className="text-center">
                   <img src={imgPerfomance.src} alt="Safety" className="mx-auto" />
                 </div>

@@ -5,8 +5,8 @@ const tabsData = [
   {
     label: "Benefits",
     content: (
-      <div className="flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
-        <div className="font-semibold text-2xl leading-5"><span>Benefits</span></div>
+      <div className="md:flex md:gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
+        <div className="font-semibold text-2xl leading-5 mb-10 md:mb-0"><span>Benefits</span></div>
         <div>
           <ul className="list-disc font-medium text-[18px]">
             <li className="mb-12">Loan amount: Maximum based on customer needs and repayment capacity</li>
@@ -21,8 +21,8 @@ const tabsData = [
   {
     label: "Features",
     content: (
-      <div className="flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
-        <div className="font-semibold text-2xl leading-5"><span>Features</span></div>
+      <div className="md:flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
+        <div className="font-semibold text-2xl leading-5 mb-10 md:mb-0"><span>Features</span></div>
         <div>
           <ul className="list-disc font-medium text-[18px]">
             <li className="mb-12">Varied loan/collateral assets support</li>
@@ -36,8 +36,8 @@ const tabsData = [
   {
     label: "Conditions",
     content: (
-      <div className="flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
-        <div className="font-semibold text-2xl leading-5"><span>Conditions</span></div>
+      <div className="md:flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
+        <div className="font-semibold text-2xl leading-5 mb-10 md:mb-0"><span>Conditions</span></div>
         <div>
           <ul className="list-disc font-medium text-[18px]">
             <li className="">Have collateral in cryptocurrencies</li>
@@ -49,7 +49,7 @@ const tabsData = [
   {
     label: "Process",
     content: (
-      <div className="flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
+      <div className="md:flex gap-[130px] bg-gray rounded-xl shadow-[0px_3px_3px_rgba(0,0,0,0.25)] py-[48px] ps-[50px]">
         <div className="font-semibold text-2xl leading-5"><span>Process</span></div>
         <div>
           <ul className="list-disc font-medium text-[18px]">
@@ -89,7 +89,7 @@ function LoanInfomationTabs() {
   return (
     <div>
       <div className="relative">
-        <div className="flex border-b-2 text-[22px]">
+        <div className="md:flex border-b-2 text-[22px]">
           {tabsData.map((tab, idx) => {
             return (
               <button

@@ -8,19 +8,19 @@ import Carousel from './Carousel';
 function CarouselItem1() {
   return (
     <div className="rounded-[19px]">
-      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[22px]'>
+      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
         <div className='flex justify-between items-center gap-4'>
           <Image src={imgEth} alt='eth' width={50} height={50}/> <span>Ethereum</span>
         </div>
         <div className='font-bold'>Up to 15%</div>
       </div>
-      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[22px]'>
+      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
         <div className='flex justify-between items-center gap-4'>
           <Image src={imgEth} alt='eth' width={50} height={50}/> <span>Ethereum</span>
         </div>
         <div className='font-bold'>Up to 15%</div>
       </div>
-      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[22px]'>
+      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
         <div className='flex justify-between items-center gap-4'>
           <Image src={imgEth} alt='eth' width={50} height={50}/> <span>Ethereum</span>
         </div>

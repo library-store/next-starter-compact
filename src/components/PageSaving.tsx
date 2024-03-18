@@ -20,20 +20,17 @@ export interface IPageSavingProps {
 
 const BannerContent = () => {
   return (
-    <div className="flex h-[589px] items-center justify-between">
+    <div className="flex md:h-[589px] items-center justify-between py-4">
       <div className="text-[35px] font-bold text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
-        <div className="text-[65px] leading-[121%]">
+        <div className="text-[20px] md:text-[65px] leading-[121%]">
           <div>Make your</div>
           <div>Crypto</div>
           <div>Make Money</div>
         </div>
 
         <div>
-          <Button className="poppins-bold text-[30px] mt-[50px] bg-gradient-to-r from-[#07EBAC] to-[#5DC8FF] rounded-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)]" style={{
-            paddingLeft: '28px',
-            paddingRight: '28px'
-          }}>
-            Start Saving
+          <Button className="flex poppins-bold text-[16px] md:text-[30px] md:mt-[50px] bg-gradient-to-r from-[#07EBAC] to-[#5DC8FF] rounded-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)] md:px-[28px]">
+            <div className='text-nowrap'>Start Saving</div>
             <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <ellipse opacity="0.5" cx="15.0068" cy="14" rx="14.4651" ry="14" fill="white" />
               <path d="M12.7466 7.875L19.5639 14.085C20.0189 14.4994 19.995 15.2226 19.5137 15.6062L12.7466 21" stroke="white" strokeWidth="3" strokeLinecap="round" />
@@ -41,11 +38,8 @@ const BannerContent = () => {
           </Button>
         </div>
       </div>
-      <div className="mr-[-86px]">
-        <img src={imgSaving1.src} alt="" style={{
-          maxWidth: '649px',
-          maxHeight: '472px'
-        }} />
+      <div className="md:mr-[-86px]">
+        <img className='max-w-[100%] max-h-[100%] md:max-w-[649px] md:max-h-[472px]' src={imgSaving1.src} alt="" />
       </div>
     </div>
   )
@@ -143,8 +137,8 @@ export default function PageSaving({}: IPageSavingProps) {
 
       <div className='content'>
         <div className='content-container mx-auto'>
-          <div className='flex justify-between gap-[58px]'>
-            <div className='grow bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[38px]'>
+          <div className='md:flex justify-between md:gap-[58px]'>
+            <div className='grow bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[38px] mb-5 md:mb-0'>
               <div className='text-center'>
                 <div className='mx-auto mb-[43px]'>
                   <SavingRatingSvg className='mx-auto' />
@@ -162,7 +156,7 @@ export default function PageSaving({}: IPageSavingProps) {
                 </div>
               </div>
             </div>
-            <div className='grow bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]  p-[38px]'>
+            <div className='grow bg-gray rounded-[18px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] p-[38px] mb-5 md:mb-0'>
               <div className='text-center'>
 
                 <div className='mx-auto mb-[43px]'>
@@ -220,8 +214,8 @@ export default function PageSaving({}: IPageSavingProps) {
             </Tabs.List>
             <Tabs.Content className="TabsContent" value="tab1">
               <div className="rounded-[30px] mt-[27px] bg-gradient-to-b from-[#E1FFF7] to-[#E1EBFF] shadow-[4px_2px_4px_rgba(0,0,0,0.25)]">
-                <div className="flex">
-                  <div className="relative flex flex-col justify-center w-[50%] p-[58px_40px]">
+                <div className="md:flex">
+                  <div className="relative flex flex-col justify-center md:w-[50%] p-[20px] md:p-[58px_40px]">
                     <div className={`mb-5 dropdownmb-[38px]`}>
                       <label className='inline-block mb-3 font-medium text-[18px]' htmlFor="btnLeft">Deposit amount</label>
                       <div className={`input-group bg-white rounded-[12px] shadow-[inset_3px_3px_4px_rgba(0,0,0,0.08)] flex h-[60px]`}>
@@ -259,7 +253,7 @@ export default function PageSaving({}: IPageSavingProps) {
                           </Dropdown>
                         </div>
 
-                        <input id="btnLeft" type="number" placeholder="Enter deposit amount" className="ps-[40px] border-0 bg-transparent grow form-input" onChange={(e) => {
+                        <input id="btnLeft" type="number" placeholder="Enter deposit amount" className="md:ps-[40px] border-0 bg-transparent grow form-input" onChange={(e) => {
                           setState({
                             ...state,
                             amount: parseInt(e.target.value)
@@ -286,10 +280,10 @@ export default function PageSaving({}: IPageSavingProps) {
                       }}
                     />
 
-                    <div className={savingCss.arrow}></div>
+                    <div className={`${savingCss.arrow} hidden md:block`}></div>
                   </div>
 
-                  <div className="w-[50%] bg-white rounded-tr-[30px] rounded-br-[30px]">
+                  <div className="md:w-[50%] bg-white md:rounded-tr-[30px] rounded-br-[30px] rounded-bl-[30px]">
                     <div className="p-[33px_42px]">
                       <div className="font-semibold text-[25px] mb-8">
                         Estimated Interest
