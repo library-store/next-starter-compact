@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
 
-const tabsData = [
+const tabsData: any = [
   {
     label: "Features",
     content: (
@@ -39,11 +39,11 @@ function SavingInfomationTabs() {
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
 
-  const tabsRef = useRef([]);
+  const tabsRef: any = useRef([]);
 
   useEffect(() => {
     function setTabPosition() {
-      const currentTab = tabsRef.current[activeTabIndex];
+      const currentTab: any = tabsRef.current[activeTabIndex];
       setTabUnderlineLeft(currentTab?.offsetLeft ?? 0);
       setTabUnderlineWidth(currentTab?.clientWidth ?? 0);
     }
@@ -58,7 +58,7 @@ function SavingInfomationTabs() {
     <div>
       <div className="relative">
         <div className="flex space-x-3 border-b-2 text-[22px]">
-          {tabsData.map((tab, idx) => {
+          {tabsData.map((tab: any, idx: any) => {
             return (
               <button
                 key={idx}

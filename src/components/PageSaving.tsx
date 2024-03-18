@@ -52,9 +52,11 @@ const BannerContent = () => {
 }
 
 export default function PageSaving({}: IPageSavingProps) {
-  const [state, setState] = React.useState({
-    selectedCoin: null,
-    selectedTerm: null,
+  const [state, setState] = React.useState<{
+    [key: string | number]: any
+  }>({
+    selectedCoin: {},
+    selectedTerm: undefined,
     coins: [],
     terms: [],
     amount: 0,
@@ -77,7 +79,7 @@ export default function PageSaving({}: IPageSavingProps) {
   }, [])
 
   React.useEffect(() => {
-    listSavingsPackages({ symbol: state.selectedCoin?.['symbol'] }).then((res: any) => {
+    listSavingsPackages({ symbol: state.selectedCoin?.symbol }).then((res: any) => {
       setState(prev => ({
         ...prev,
         terms: res.results

@@ -1,10 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import SavingTabs from './SavingTabs';
 import * as Tabs from "@radix-ui/react-tabs";
 import Select from './Elements/Select';
-import InputGroup from './Elements/input/InputGroup';
 import savingCss from "./saving.module.scss"
 import Divider from './Elements/Divider';
 import Dropdown from './Elements/Dropdown';

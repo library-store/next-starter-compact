@@ -2,7 +2,6 @@
 
 import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
-import { Button } from "./Elements/button";
 import InputGroup from "./Elements/input/InputGroup";
 import Select from "./Elements/Select";
 import Divider from "./Elements/Divider";

@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import SavingTabs from './SavingTabs';
 import SavingInfomationTabs from './SavingInfomationTabs';
 
 export interface IServiceInfomationProps {
