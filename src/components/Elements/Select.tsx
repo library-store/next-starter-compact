@@ -1,10 +1,10 @@
 import * as React from 'react';
-import ReactSelect, { type GroupBase, type OptionProps } from 'react-select';
+import ReactSelect from 'react-select';
 
 export interface ISelectProps extends React.InputHTMLAttributes<HTMLInputElement>{
   label?: string;
   height?: number,
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: any) => void;
   options: { 
     label: string; 
     value: string | number;
@@ -28,10 +28,13 @@ export default function Select(props: Readonly<ISelectProps>) {
     placeholder = 'Select an option',
     options,
     height = 48,
-    onChange,
     style = {},
+    onChange,
     ...rest
   } = props;
+
+  console.log('rest', rest);
+  
 
   return (
     <div>
@@ -41,13 +44,27 @@ export default function Select(props: Readonly<ISelectProps>) {
         className='rounded-[12px] shadow-[inset_3px_3px_4px_rgba(0,0,0,0.08)]'
         id="select"
         placeholder={placeholder}
-        options={options} 
+        options={options}
         styles={{
           indicatorSeparator: (provided) => ({ ...provided, display: 'none' }),
           control: (provided) => ({ ...provided, ...style }),
         }} 
-        components={{ DropdownIndicator  }}
-        {...rest}
+        components={{ 
+          DropdownIndicator,
+          // Option: ({ children, ...props }) => {
+          //   return (
+          //     <div {...props} className='p-3'>
+          //       1 {children}
+          //     </div>
+          //   )
+          // }
+        }}
+        onChange={(e) => {
+          if (onChange && e) {
+            onChange(e);
+          }
+        }}
+        // {...rest}
       />
     </div>
   );

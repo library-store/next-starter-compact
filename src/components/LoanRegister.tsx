@@ -1,8 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import SavingTabs from './SavingTabs';
-import LoanInfomationTabs from './LoanInfomationTabs';
 import { Button } from './Elements/button';
 
 export interface ILoanRegisterProps {

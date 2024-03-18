@@ -28,7 +28,7 @@ instance.interceptors.response.use(
       }
     }),
   (error) =>
-    new Promise((resolve, reject) => {
+    new Promise((reject) => {
       return reject(error);
     })
 );

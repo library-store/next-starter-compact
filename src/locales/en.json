@@ -18,5 +18,9 @@
   "Auth": {
     "meta_title": "Login | Register",
     "meta_description": "."
+  },
+  "Saving": {
+    "meta_title": "Saving | iFlux",
+    "meta_description": "."
   }
 }

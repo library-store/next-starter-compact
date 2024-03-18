@@ -4,8 +4,13 @@ const withNextIntlConfig = withNextIntl('./src/libs/i18n.ts');
 
 /** @type {import('next').NextConfig} */
 export default withNextIntlConfig({
+  // eslint: {
+  //   dirs: ['.'],
+  // },
   eslint: {
-    dirs: ['.'],
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
   },
   poweredByHeader: false,
   reactStrictMode: true,

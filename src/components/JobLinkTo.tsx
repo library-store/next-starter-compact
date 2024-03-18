@@ -6,7 +6,7 @@ import { Button } from './Elements/button';
 export interface IJobLinkToProps {
 }
 
-export default function JobLinkTo (props: IJobLinkToProps) {
+export default function JobLinkTo ({}: IJobLinkToProps) {
   function scrollToElement(targetId: string) {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {

@@ -25,12 +25,13 @@ const Navbar = () => {
 
       <ul className="flex items-center gap-[7px] font-medium">
         <li>
-          <Button className="rounded-full bg-black text-white">Log in</Button>
+          <a href="https://ebankdev.iflux.global/"><Button className="rounded-full bg-black text-white">Log in</Button></a>
         </li>
         <li>
-          <Button className="rounded-full border border-black bg-white text-black">
+          <a href="https://ebankdev.iflux.global/"><Button className="rounded-full border border-black bg-white text-black">
             Sign up
           </Button>
+          </a>
         </li>
       </ul>
     </nav>

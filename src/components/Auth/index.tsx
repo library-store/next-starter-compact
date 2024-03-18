@@ -10,7 +10,7 @@ import { register } from '@/app/api/auth';
 export interface IAuthProps {
 }
 
-export default function Auth (props: IAuthProps) {
+export default function Auth ({}: IAuthProps) {
   const [state, setState] = React.useState({
     page: 'login', // login, register
   })

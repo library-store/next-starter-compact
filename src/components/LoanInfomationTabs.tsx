@@ -71,7 +71,7 @@ function LoanInfomationTabs() {
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
 
-  const tabsRef = useRef([]);
+  const tabsRef = useRef<HTMLButtonElement[]>([]);
 
   useEffect(() => {
     function setTabPosition() {
@@ -94,7 +94,7 @@ function LoanInfomationTabs() {
             return (
               <button
                 key={idx}
-                ref={(el) => (tabsRef.current[idx] = el)}
+                ref={(el) => (tabsRef.current[idx] = el!)}
                 className={classNames(
                   "pt-2 pb-3 me-16",
                   activeTabIndex == idx && "text-blue font-semibold"
@@ -112,7 +112,7 @@ function LoanInfomationTabs() {
         />
       </div>
       <div className="py-4">
-        <div>{tabsData[activeTabIndex].content}</div>
+        <div>{tabsData[activeTabIndex]?.content}</div>
       </div>
     </div>
   );

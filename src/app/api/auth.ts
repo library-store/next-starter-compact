@@ -1,9 +1,5 @@
 import { fetchApi } from "./fetchApi";
 
-export const me = async (filter: any) => {
-  return fetchApi.get(`/forest/${filter}`);
-};
-
 export const register = async (data: any) => {
   return fetchApi.post("/public/v1/accounts", data);
 };

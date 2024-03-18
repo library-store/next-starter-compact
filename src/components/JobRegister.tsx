@@ -1,15 +1,33 @@
 'use client';
 
 import * as React from 'react';
-import SavingTabs from './SavingTabs';
-import LoanInfomationTabs from './LoanInfomationTabs';
 import { Button } from './Elements/button';
+import axios from 'axios';
 
 export interface IJobRegisterProps {
   children?: React.ReactNode;
 }
 
 export default function JobRegister ({}: IJobRegisterProps) {
+  const FORM_ACTION_URL = 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfE2QAC0h0vNRj37SJtBgDsYU5qAVYAg1FGRi1_vUHNrDmyAA/formResponse';
+
+  const handleSubmit = () => {
+    axios.post(FORM_ACTION_URL, {
+      'entry.1368318470': '', // Full name
+      'entry.1979596615': '', // Address
+      'entry.1840010903': '', // Position Applied For
+      'entry.1527449654': 'Software Engineer', // Self Description
+      'entry.1441207839_year': '',
+      'entry.1441207839_month': '',
+      'entry.1441207839_day': '',
+      'entry.700957981': '', // CV Attachment
+    }).then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log(error);
+    });
+  }
+
   return (
     <div>
       <div className='mx-auto content-container'>
@@ -49,7 +67,7 @@ export default function JobRegister ({}: IJobRegisterProps) {
           </div>
 
           <div className='text-center mt-[35px]'>
-            <Button type='submit' className='rounded-full w-[170px] h-[43px] bg-gradient-to-r from-[#0253F1] to-[#14A1FE] text-white font-extrabold text-[22px]'>Submit</Button>
+            <Button type='submit' className='rounded-full w-[170px] h-[43px] bg-gradient-to-r from-[#0253F1] to-[#14A1FE] text-white font-extrabold text-[22px]'  onClick={() => handleSubmit()}>Submit</Button>
           </div>
         </div>
       </div>

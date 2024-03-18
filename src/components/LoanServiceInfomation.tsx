@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import SavingTabs from './SavingTabs';
 import LoanInfomationTabs from './LoanInfomationTabs';
 
 export interface ILoanServiceInfomationProps {

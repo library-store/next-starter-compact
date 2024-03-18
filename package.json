@@ -22,6 +22,8 @@
     "animate.css": "^4.1.1",
     "axios": "^1.6.7",
     "formik": "^2.4.5",
+    "google-api-javascript-client": "^0.1.0",
+    "lodash": "^4.17.21",
     "next": "^14.1.1",
     "next-intl": "^3.9.1",
     "next-sitemap": "^4.2.3",
@@ -37,6 +39,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.0",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-slick": "^0.23.13",

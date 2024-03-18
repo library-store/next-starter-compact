@@ -2,8 +2,6 @@
 import MainBanner from '@/components/MainBanner';
 import { getTranslations } from 'next-intl/server';
 
-import { Button } from '@/components/Elements/button';
-
 import imgJob from "@/assets/images/banner-job.png"
 import JobRegister from '@/components/JobRegister';
 import JobLinkTo from '@/components/JobLinkTo';
