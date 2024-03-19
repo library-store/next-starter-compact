@@ -38,7 +38,7 @@ export default function Header() {
                   </div>
                   <div className="w-auto lg:hidden">
                     <a className="inline-block" href="#">
-                      <svg className="navbar-burger text-blue-500" width="45" height="45" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="navbar-burger text-blue-500" width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="56" height="56" rx="28" fill="currentColor"></rect>
                         <path d="M37 32H19M37 24H19" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
@@ -60,7 +60,7 @@ export default function Header() {
                       </div>
                       <div className="w-auto p-2">
                         <a className="inline-block navbar-burger" href="#">
-                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 18L18 6M6 6L18 18" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                           </svg>
                         </a>

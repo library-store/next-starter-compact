@@ -1,7 +1,11 @@
+'use client';
 import * as React from "react";
 
 import CoinRatingCasousel from "./CoinRatingCasousel";
 import { Button } from "./Elements/button";
+import { listSavingsPackages } from "@/app/api/coin";
+import SubmitLoanIcon from "@/assets/svgs/SubmitLoanIcon";
+import SupportLoanIcon from "@/assets/svgs/SupportLoanIcon";
 
 const ArrowRight = () => {
   return (
@@ -23,6 +27,15 @@ const ArrowRight = () => {
 };
 
 export default function OurService() {
+  const [coins, setCoins] = React.useState([])
+
+  React.useEffect(() => {
+    listSavingsPackages({is_favorite: true}).then((res: any) => {
+      setCoins(res.results)
+    })
+  }, [])
+  
+
   return (
     <section className="section-our-service">
       <div className="">
@@ -42,7 +55,7 @@ export default function OurService() {
                 </div>
 
                 <div className="grow flex flex-col justify-between">
-                  <CoinRatingCasousel />
+                  <CoinRatingCasousel coins={coins}/>
                   <div className="mt-[55px] text-center">
                     <Button className="bg-gradient-to-r from-[#07EBAC] to-[#5DC8FF] poppins-bold rounded-[11px] h-[48px] w-[205px] px-[32px]">
                       Start Saving
@@ -62,65 +75,19 @@ export default function OurService() {
                 <div className="">
                   <div className="hidden md:flex flex-row flex-wrap justify-between">
                     <div className="flex flex-col items-center justify-center">
-                      <div className="flex flex-col items-center gap-[18px] pb-[26px]">
+                      <div className="group flex flex-col items-center gap-[18px] pb-[26px]">
                         <div className="relative p-[16px_19px] rounded-[13px] shadow-[3px_3px_4px_rgba(0,0,0,0.25)] w-[105px] h-[104px]">
-                          <svg
-                            width="72"
-                            height="67"
-                            viewBox="0 0 72 67"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              opacity="0.15"
-                              cx="27.5"
-                              cy="27.5"
-                              r="27.5"
-                              fill="#0353F3"
-                            />
-                            <g clipPath="url(#clip0_0_1)">
-                              <path
-                                d="M28.0171 63.7897V62.4173C28.0171 51.4382 28.0244 40.4591 28 29.48C28 28.6532 28.2176 28.0615 28.8189 27.4748C32.1458 24.2329 35.4164 20.9353 38.7409 17.6959C39.1002 17.3443 39.6918 17.034 40.1758 17.0315C47.8 16.9879 55.4218 17 63.0436 17.0024C63.2416 17.0024 63.4371 17.0267 63.7989 17.0509C63.7989 17.5504 63.7989 18.016 63.7989 18.4815C63.7989 26.888 63.8087 35.292 63.7842 43.6985C63.7818 44.5132 63.9505 44.9424 64.806 45.2819C70.064 47.3817 72.9729 52.893 71.7042 58.1789C70.3842 63.6781 65.4953 67.3249 59.812 66.9733C57.4091 66.8254 55.2727 65.9283 53.3513 64.4589C52.86 64.0831 52.1364 63.8188 51.518 63.8164C44.2213 63.7727 36.9222 63.7873 29.6231 63.7873H28.0171V63.7897ZM31.3709 31.5046V60.5042H50.2396C48.6824 56.6901 48.8267 53.0822 51.0047 49.6876C53.2071 46.2517 56.5071 44.6223 60.4989 44.392V20.2685H42.608V31.5046H31.3709ZM70.35 55.7154C70.3304 50.3277 65.9402 45.9874 60.5356 46.0141C55.1773 46.0408 50.8262 50.3834 50.8287 55.7033C50.8287 61.1225 55.1602 65.4652 60.5796 65.487C65.9549 65.5064 70.372 61.0934 70.3524 55.7178L70.35 55.7154Z"
-                                fill="#3C3C3C"
-                              />
-                              <path
-                                d="M36.2622 36.2643V34.8265H55.6369V36.2643H36.2622Z"
-                                fill="#3C3C3C"
-                              />
-                              <path
-                                d="M55.6858 41.2738V42.748H36.2989V41.2738H55.6858Z"
-                                fill="#3C3C3C"
-                              />
-                              <path
-                                d="M36.2818 39.4674V38.0683H55.6613V39.4674H36.2818Z"
-                                fill="#3C3C3C"
-                              />
-                              <path
-                                d="M36.3258 44.4987H47.4284V45.9486H36.3258V44.4987Z"
-                                fill="#3C3C3C"
-                              />
-                              <path
-                                d="M58.9516 62.09V55.7445H54.4904C56.6024 53.6714 58.6533 51.6564 60.604 49.7433C62.4398 51.5619 64.4931 53.5938 66.5391 55.6208H62.2198V62.09H58.9516Z"
-                                fill="#3C3C3C"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_0_1">
-                                <rect
-                                  width="44"
-                                  height="50"
-                                  fill="white"
-                                  transform="translate(28 17)"
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
+                          <div className="relative w-full h-full flex items-center justify-center">
+                            <div className="rounded-full w-[55px] h-[55px] absolute top-0 left-0 text-transparent bg-[rgb(3,83,243,0.15)] group-hover:opacity-0 duration-150">cercle</div>
+                            <SubmitLoanIcon className="absolute bottom-0 right-0 h-[75%] w-auto group-hover:h-full duration-150 " fillClassName="fill-black"/>
+                            <SubmitLoanIcon className="absolute bottom-0 right-0 h-[75%] w-auto opacity-0 group-hover:opacity-100 group-hover:h-full duration-150"/>
+                          </div>
 
                           <div className="absolute top-1/2 -translate-y-1/2 right-[-37.5px]">
                             <ArrowRight />
                           </div>
                         </div>
-                        <div className="text-center text-[15px] font-medium">
+                        <div className="text-center text-[15px] font-medium group-hover:font-bold duration-150">
                           <div>Submit a loan</div>
                           <div>application</div>
                           <div>request</div>
@@ -205,51 +172,13 @@ export default function OurService() {
                     {/* End col 1 */}
 
                     <div className="flex flex-col items-center justify-center">
-                      <div className="flex flex-col items-center gap-[18px] pb-[26px]">
+                    <div className="group flex flex-col items-center gap-[18px] pb-[26px]">
                         <div className="relative p-[16px_19px] rounded-[13px] shadow-[3px_3px_4px_rgba(0,0,0,0.25)] w-[105px] h-[104px]">
-                          <svg
-                            width="76"
-                            height="60"
-                            viewBox="0 0 76 60"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              opacity="0.15"
-                              cx="27.5"
-                              cy="27.5"
-                              r="27.5"
-                              fill="#0353F3"
-                            />
-                            <g clipPath="url(#clip0_0_1)">
-                              <path
-                                d="M51.3909 16C52.6093 16.2136 53.8546 16.3326 55.0427 16.657C61.3544 18.3811 65.5874 22.4018 67.8878 28.3949C68.6044 30.2621 68.979 32.2564 69.5264 34.2564C70.1718 34.4642 71.0098 34.649 71.7742 34.9931C74.9079 36.4076 76.5558 39.7679 75.8311 43.157C75.146 46.3637 72.164 48.7679 68.8005 48.8245C68.4702 48.8303 68.141 48.8303 67.8108 48.8279C66.4593 48.8199 65.717 48.0947 65.7158 46.7667C65.7123 43.3499 65.7578 39.933 65.703 36.5173C65.64 32.4908 64.6608 28.7079 62.1002 25.4954C58.5405 21.0312 53.7951 19.1189 48.1358 19.8626C42.305 20.6293 38.3101 23.9434 36.0482 29.2864C35.0632 31.612 34.6395 34.067 34.6244 36.5843C34.6069 39.5589 34.5473 42.537 34.643 45.5092C34.7644 49.2829 36.2653 52.4261 39.4258 54.6674C40.9442 55.7448 42.6645 56.3002 44.5412 56.3279C45.8612 56.3464 47.1812 56.3245 48.5 56.3476C49.4383 56.3637 50.1864 56.9757 50.3487 57.8037C50.5179 58.6674 50.1094 59.4919 49.3169 59.8533C49.1442 59.9319 48.9458 60.0069 48.7626 60.0012C46.6921 59.9399 44.5692 60.127 42.5606 59.7413C36.7963 58.6351 33.1456 55.1085 31.514 49.5439C31.3985 49.1478 31.283 48.9931 30.8395 48.9746C26.9355 48.8072 24.1999 46.0866 24.0131 42.2044C23.8859 39.5473 24.7099 37.2898 26.939 35.6651C27.9416 34.9342 28.8636 34.6605 30.9095 34.388C31.1803 33.0947 31.381 31.7864 31.7335 30.5196C33.2974 24.9007 36.5151 20.5566 41.8674 17.9111C43.9355 16.8891 46.1319 16.2968 48.437 16.0982C48.6085 16.0831 48.7754 16.0335 48.9458 16C49.7604 16 50.5762 16 51.3909 16Z"
-                                fill="black"
-                              />
-                              <path
-                                d="M42.6934 39.5982C43.7963 39.5913 44.7195 40.4735 44.7218 41.537C44.7242 42.5913 43.7811 43.5093 42.7027 43.5035C41.643 43.4966 40.7315 42.6167 40.7047 41.5762C40.6778 40.5197 41.5963 39.6063 42.6934 39.5993V39.5982Z"
-                                fill="black"
-                              />
-                              <path
-                                d="M52.1305 41.5509C52.1247 42.6455 51.226 43.5358 50.1418 43.522C49.0552 43.507 48.1799 42.5959 48.2009 41.5024C48.2219 40.4285 49.0914 39.5705 50.1617 39.567C51.2541 39.5636 52.1364 40.4527 52.1305 41.5509Z"
-                                fill="black"
-                              />
-                              <path
-                                d="M59.5824 41.5705C59.5661 42.6652 58.6581 43.5474 57.5738 43.5208C56.4861 43.4943 55.6225 42.5763 55.654 41.4827C55.6843 40.4088 56.5631 39.559 57.6334 39.5682C58.7269 39.5763 59.5976 40.4723 59.5813 41.5705H59.5824Z"
-                                fill="black"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_0_1">
-                                <rect
-                                  width="52"
-                                  height="44"
-                                  fill="white"
-                                  transform="translate(24 16)"
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
+                          <div className="relative w-full h-full flex items-center justify-center">
+                            <div className="rounded-full w-[55px] h-[55px] absolute top-0 left-0 text-transparent bg-[rgb(3,83,243,0.15)] group-hover:opacity-0 duration-150">cercle</div>
+                            <SupportLoanIcon className="absolute bottom-0 right-0 h-[75%] w-auto group-hover:h-full duration-150 " fillClassName="fill-black"/>
+                            <SupportLoanIcon className="absolute bottom-0 right-0 h-[75%] w-auto opacity-0 group-hover:opacity-100 group-hover:h-full duration-150"/>
+                          </div>
                           <div className="absolute top-1/2 -translate-y-1/2 right-[-37.5px]">
                             <ArrowRight />
                           </div>

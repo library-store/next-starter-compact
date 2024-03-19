@@ -33,9 +33,6 @@ export default function Select(props: Readonly<ISelectProps>) {
     ...rest
   } = props;
 
-  console.log('rest', rest);
-  
-
   return (
     <div>
       {label && <label className='inline-block mb-3 font-medium text-[18px]' htmlFor="select">{label}</label>}

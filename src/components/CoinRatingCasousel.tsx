@@ -1,47 +1,36 @@
-import Image from 'next/image';
 import * as React from 'react';
 
-import imgEth from '@/assets/images/ETH.png';
-
 import Carousel from './Carousel';
+import { chunk } from 'lodash';
 
-function CarouselItem1() {
+function CarouselItem1({coins = []}) {
   return (
     <div className="rounded-[19px]">
-      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
-        <div className='flex justify-between items-center gap-4'>
-          <Image src={imgEth} alt='eth' width={50} height={50}/> <span>Ethereum</span>
-        </div>
-        <div className='font-bold'>Up to 15%</div>
-      </div>
-      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
-        <div className='flex justify-between items-center gap-4'>
-          <Image src={imgEth} alt='eth' width={50} height={50}/> <span>Ethereum</span>
-        </div>
-        <div className='font-bold'>Up to 15%</div>
-      </div>
-      <div className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
-        <div className='flex justify-between items-center gap-4'>
-          <Image src={imgEth} alt='eth' width={50} height={50}/> <span>Ethereum</span>
-        </div>
-        <div className='font-bold'>Up to 15%</div>
-      </div>
+      {
+        coins.map((coin: any, idx: number) => (
+          <div key={idx.toString()} className='coin-item flex justify-between items-center p-[18px_26px] text-[1rem] md:text-[22px]'>
+            <div className='flex justify-between items-center gap-4'>
+              <img src={coin?.token?.icon_url} alt='eth' width={50} height={50}/> <span>{coin?.token?.name}</span>
+            </div>
+            <div className='font-bold'>Up to {coin?.interest_rate}%</div>
+          </div>
+        ))
+      }
     </div>
   );
 }
 
-export default function CoinRatingCasousel() {
+export default function CoinRatingCasousel({coins = []}) {
+
+  const splitArrays = chunk(coins, 3);
+
   return (
     <div className="w-100">
       <div className="mx-auto">
         <div className="mx-auto">
           <Carousel
             className='coin-rating-slider'
-            items={[
-              <CarouselItem1 key="1" />,
-              <CarouselItem1 key="2" />,
-              <CarouselItem1 key="3" />,
-            ]}
+            items={splitArrays.map((item, idx) => <CarouselItem1 key={idx.toString()} coins={item}  />)}
           />
         </div>
       </div>
